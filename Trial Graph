@@ -15,11 +15,8 @@
     <p>This is a simple website hosted on GitHub Pages!</p>
     
     <!-- Embedding the Flourish graph -->
-    <div class="flourish-embed flourish-chart" data-src="visualisation/19446525">
-        <script src="https://public.flourish.studio/resources/embed.js"></script>
-        <noscript>
-            <img src="https://public.flourish.studio/visualisation/19446525/thumbnail" width="100%" alt="chart visualization" />
-        </noscript>
-    </div>
+    <div class="flourish-embed flourish-chart" data-src="visualisation/19446525"></div>
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+
 </body>
 </html>
