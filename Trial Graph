@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
+    <title>A Scarce Flavour</title>
     <style>
         body {
             background-color: #EFD9CC;
@@ -21,8 +21,8 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple website hosted on GitHub Pages!</p>
+    <h1>A Scarce Flavour</h1>
+    <p>The price of non-split vanilla beans</p>
     
     <!-- Embedding the Flourish graph and centering it -->
     <div class="flourish-embed flourish-chart" data-src="visualisation/19446525"></div>
