@@ -39,9 +39,15 @@
             font-weight: bold; /* Bold text */
         }
         .flourish-embed {
-            width: 100%; /* Set to 100% to respect the parent width */
-            max-width: 700px; /* Set a maximum width of 700px */
             margin-bottom: 20px; /* Add spacing between the graphs */
+        }
+        .flourish-chart {
+            width: 800px; /* Set width for the first graph */
+            margin-left: 0; /* Align left edge to the text */
+        }
+        .flourish-map {
+            width: 850px; /* Set width for the second graph */
+            margin: 0 auto; /* Center the second graph */
         }
         .gif-container {
             padding: 20px 0; /* Add padding above and below the GIF */
@@ -65,11 +71,11 @@
             top: 50%; /* Center vertically */
             left: 50%; /* Center horizontally */
             transform: translate(-50%, -50%); /* Adjust position */
-            color: white; /* Text color */
-            font-size: 2em; /* Font size */
-            font-weight: bold; /* Bold text */
+            color: black; /* Text color */
+            font-size: 1.5em; /* Font size */
+            font-weight: normal; /* Bold text */
             text-transform: uppercase; /* All caps */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow for better visibility */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
         }
     </style>
 </head>
@@ -95,13 +101,13 @@
 
     <p class="uppercase-text">The Price of Non-Split Madagascar Vanilla Bean</p>
     
-    <!-- Embedding the first Flourish graph and centering it -->
+    <!-- Embedding the first Flourish graph -->
     <div class="flourish-embed flourish-chart" data-src="visualisation/19446525"></div>
     <script src="https://public.flourish.studio/resources/embed.js"></script>
 
     <p class="uppercase-text">World's Biggest Vanilla Producers</p>
 
-    <!-- Embedding the second Flourish map and centering it -->
+    <!-- Embedding the second Flourish map -->
     <div class="flourish-embed flourish-map" data-src="visualisation/19498486"></div>
     <script src="https://public.flourish.studio/resources/embed.js"></script>
 
