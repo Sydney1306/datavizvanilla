@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Redesign Project</title>
     <style>
+        /* Import Open Sans font from Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
-        
+
         body {
             background-color: #EFD9CC;
             display: flex;
@@ -15,122 +16,49 @@
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Open Sans', sans-serif; /* Set default font to Open Sans */
         }
         h1 {
             font-family: 'Garamond', serif;
-            font-weight: bold;
+            font-style: italic; /* Remove italic style */
+            font-weight: bold; /* Make the font bold */
             color: #572000;
-            font-size: 2.5em;
+            font-size: 2.5em; /* Increase the font size */
         }
         p {
             color: #572000;
-            max-width: 800px;
-            width: 80%;
-            text-align: center;
+            max-width: 800px; /* Match paragraph width to graph */
+            width: 80%; /* Match graph width */
+            text-align: center; /* Center-align text */
         }
         .uppercase-text {
-            text-transform: uppercase;
-            font-weight: bold;
+            text-transform: uppercase; /* Convert text to all caps */
+            font-weight: bold; /* Bold text */
         }
         .flourish-embed {
-            width: 80%;
-            max-width: 800px;
-            margin-bottom: 20px;
-        }
-        .absolute-section {
-            width: 100%; 
-            height: 100%; 
-            position: relative; 
-            background: #FFF1E0;
-        }
-        .absolute-section div {
-            color: #515151;
-            font-family: 'Source Sans Pro', sans-serif;
-            word-wrap: break-word;
-        }
-        .title {
-            position: absolute;
-            left: 648px;
-            top: 197px;
-            font-size: 84px;
-            font-weight: 400;
-            text-align: center;
-        }
-        .data-visualization {
-            position: absolute;
-            left: 802px;
-            top: 687px;
-            font-size: 24px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-        .sava-region {
-            position: absolute;
-            left: 1119px;
-            top: 893px;
-            font-size: 24px;
-            text-align: center;
-        }
-        .author {
-            position: absolute;
-            left: 890px;
-            top: 724px;
-            font-size: 24px;
-            text-align: center;
-        }
-        .main-image {
-            position: absolute;
-            left: 722px;
-            top: 361px;
-            width: 476px;
-            height: 60px;
-        }
-        .main-paragraph {
-            position: absolute;
-            left: 473px;
-            top: 467px;
-            width: 975px;
-            font-size: 32px;
-        }
-        .sub-paragraph {
-            position: absolute;
-            left: 473px;
-            top: 1386px;
-            width: 975px;
-            font-size: 32px;
+            width: 80%; /* Adjust the width as needed */
+            max-width: 800px; /* Set a maximum width */
+            margin-bottom: 20px; /* Add spacing between the graphs */
         }
     </style>
 </head>
 <body>
-    <!-- Redesign Project Content -->
     <h1>A Scarce Flavour</h1>
     <p>Growing global demand for natural ingredients and supply insufficiency have caused Madagascar vanilla prices to skyrocket by nearly 500% in the past four and a half years, making it more expensive than silver.</p>
+    
+    <!-- Adding new content -->
     <p>Madagascar produces about 80% of the world’s vanilla, mainly in the northern region of Sava, notorious for the cultivation of the Bourbon vanilla variety.</p>
     <p>Since 2015, the wholesale price of the spice has risen nearly 500 percent, partly because of growing global demand for healthy, natural ingredients. But the main reason behind the skyrocketing prices is supply. Cyclones, drought, and crop-theft have hit Madagascar in recent years, slashing into the tender crop’s quality and quantity.</p>
+
     <p class="uppercase-text">The Price of Non-Split Madagascar Vanilla Bean</p>
     
-    <!-- Flourish Embeds -->
+    <!-- Embedding the first Flourish graph and centering it -->
     <div class="flourish-embed flourish-chart" data-src="visualisation/19446525"></div>
     <script src="https://public.flourish.studio/resources/embed.js"></script>
 
+    <!-- Embedding the second Flourish map and centering it -->
     <div class="flourish-embed flourish-map" data-src="visualisation/19498486"></div>
     <script src="https://public.flourish.studio/resources/embed.js"></script>
 
-    <!-- Absolute Positioned Section -->
-    <div class="absolute-section">
-        <div class="title">A Scarce Flavour</div>
-        <div class="data-visualization">Data Visualisation Redesign</div>
-        <div class="sava-region">Sava Region</div>
-        <div class="author">By <strong>Nitya Vyas</strong></div>
-        <img class="main-image" src="https://via.placeholder.com/476x60" alt="Main Image" />
-        <div class="main-paragraph">
-            Growing global demand for natural ingredients and supply insufficiency have caused Madagascar vanilla prices to skyrocket by nearly 500% in the past four and a half years, making it more expensive than silver.
-        </div>
-        <div class="sub-paragraph">
-            Madagascar produces about 80% of the world’s vanilla, mainly in the northern region of Sava, notorious for the cultivation of the Bourbon vanilla variety.<br/>
-            Since 2015, the wholesale price of the spice has risen nearly 500 percent, partly because of growing global demand for healthy, natural ingredients. But the main reason behind the skyrocketing prices is supply. Cyclones, drought, and crop-theft have hit Madagascar in recent years, slashing into the tender crop’s quality and quantity.
-        </div>
-    </div>
 </body>
 </html>
