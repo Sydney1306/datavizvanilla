@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Redesign Project</title>
+    <style>
+        /* Import Open Sans font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
 
+        body {
+            background-color: #FFF1E0; /* Updated background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif; /* Set default font to Open Sans */
+        }
+        h1 {
+            font-family: 'Garamond', serif;
+            font-weight: bold; /* Make the font bold */
+            color: #572000;
+            font-size: 2.5em; /* Increase the font size */
+            text-align: center; /* Center-align the heading */
+        }
+        p {
+            color: #515151; /* Change paragraph text color to #515151 */
+            max-width: 700px; /* Set paragraph width to 700px */
+            width: 100%; /* Match graph width */
+            text-align: left; /* Left-align text */
+        }
+        .centered {
+            text-align: center; /* Center-align specific text */
+        }
+        .uppercase-text {
+            text-transform: uppercase; /* Convert text to all caps */
+            font-weight: bold; /* Bold text */
+        }
+        .flourish-embed {
+            margin-bottom: 20px; /* Add spacing between the graphs */
+        }
+        .flourish-chart {
+            width: 800px; /* Set width for the first graph */
+            margin-left: 0; /* Align left edge to the text */
+        }
+        .flourish-map {
+            width: 850px; /* Set width for the second graph */
+            margin: 0 auto; /* Center the second graph */
+        }
+        .gif-container {
+            padding: 20px 0; /* Add padding above and below the GIF */
+            text-align: center; /* Center the GIF */
+        }
+        .gif-container img {
+            width: 60%; /* Adjust the width of the GIF */
+            max-width: 600px; /* Set a max width */
+        }
+        .image-container {
+            position: relative; /* Position relative for overlay */
+            text-align: center; /* Center text */
+            margin-top: 20px; /* Add some space above the image */
+        }
+        .image-container img {
+            width: 100%; /* Responsive image */
+            max-width: 700px; /* Set a max width of 700px */
+        }
+        .overlay {
+            position: absolute; /* Position text over the image */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust position */
+            color: white; /* Text color */
+            font-size: 2em; /* Font size */
+            font-weight: bold; /* Bold text */
+            text-transform: uppercase; /* All caps */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow for better visibility */
+        }
+    </style>
+</head>
+<body>
+    <h1>A Scarce Flavour</h1>
+    
+    <!-- GIF container with padding -->
+    <div class="gif-container">
+        <img src="https://www.reuters.com/graphics/MCCORMICK-VANILLA/010092KE3B8/images/gif-vanilla.gif" alt="Vanilla Plant GIF">
+    </div>
+
+    <p class="centered">Growing global demand for natural ingredients and supply insufficiency have caused Madagascar vanilla prices to skyrocket by nearly 500% in the past four and a half years, making it more expensive than silver.</p>
+
+    <!-- Image container for Madagascar image -->
+    <div class="image-container">
+        <img src="https://www.reuters.com/graphics/MCCORMICK-VANILLA/010092KE3B8/images/animations/madagascar.png" alt="Map of Madagascar">
+        <div class="overlay">MADAGASCAR</div>
+    </div>
+
+    <!-- Adding new content -->
+    <p>Madagascar produces about 80% of the world’s vanilla, mainly in the northern region of Sava, notorious for the cultivation of the Bourbon vanilla variety.</p>
+    <p>Since 2015, the wholesale price of the spice has risen nearly 500 percent, partly because of growing global demand for healthy, natural ingredients. But the main reason behind the skyrocketing prices is supply. Cyclones, drought, and crop-theft have hit Madagascar in recent years, slashing into the tender crop’s quality and quantity.</p>
+
+    <p class="uppercase-text">The Price of Non-Split Madagascar Vanilla Bean</p>
+    
+    <!-- Embedding the first Flourish graph -->
+    <div class="flourish-embed flourish-chart" data-src="visualisation/19446525"></div>
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+
+    <p class="uppercase-text">World's Biggest Vanilla Producers</p>
+
+    <!-- Embedding the second Flourish map -->
+    <div class="flourish-embed flourish-map" data-src="visualisation/19498486"></div>
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+
+    <!-- Embedding the new graph -->
+    <div class="flourish-embed flourish-chart" data-src="visualisation/19499914"></div>
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <noscript>
+        <img src="https://public.flourish.studio/visualisation/19499914/thumbnail" width="100%" alt="chart visualization" />
+    </noscript>
+
+</body>
+</html>
