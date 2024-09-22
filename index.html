@@ -45,10 +45,6 @@
             width: 800px; /* Set width for the first graph */
             margin-left: 0; /* Align left edge to the text */
         }
-        .flourish-map {
-            width: 850px; /* Set width for the second graph */
-            margin: 0 auto; /* Center the second graph */
-        }
         .gif-container {
             padding: 20px 0; /* Add padding above and below the GIF */
             text-align: center; /* Center the GIF */
@@ -90,7 +86,7 @@
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .flourish-chart, .flourish-map {
+            .flourish-chart {
                 width: 100%; /* Ensure graphs adjust on smaller screens */
             }
             .image-container img {
@@ -127,16 +123,17 @@
 
     <p class="uppercase-text">World's Biggest Vanilla Producers</p>
 
-    <!-- Embedding the second Flourish map -->
-    <div class="flourish-embed flourish-map" data-src="visualisation/19498486"></div>
-    <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <!-- Replaced second Flourish graph -->
+    <div class="flourish-embed flourish-chart" data-src="visualisation/19506827">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/visualisation/19506827/thumbnail" width="100%" alt="chart visualization" /></noscript>
+    </div>
 
-    <!-- Embedding the new graph -->
-    <div class="flourish-embed flourish-chart" data-src="visualisation/19499914"></div>
-    <script src="https://public.flourish.studio/resources/embed.js"></script>
-    <noscript>
-        <img src="https://public.flourish.studio/visualisation/19499914/thumbnail" width="100%" alt="chart visualization" />
-    </noscript>
+    <!-- Replaced third Flourish graph -->
+    <div class="flourish-embed flourish-chart" data-src="visualisation/19506694">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/visualisation/19506694/thumbnail" width="100%" alt="chart visualization" /></noscript>
+    </div>
 
     <!-- Embedding the PNG TimelineTrial1 -->
     <div class="image-container">
