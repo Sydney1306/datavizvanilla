@@ -105,6 +105,12 @@
 
     <p class="centered">Growing global demand for natural ingredients and supply insufficiency have caused Madagascar vanilla prices to skyrocket by nearly 500% in the past four and a half years, making it more expensive than silver.</p>
 
+    <!-- Image container for Madagascar image -->
+    <div class="image-container">
+        <img src="https://www.reuters.com/graphics/MCCORMICK-VANILLA/010092KE3B8/images/animations/madagascar.png" alt="Map of Madagascar">
+        <div class="overlay">MADAGASCAR</div>
+    </div>
+
     <!-- Adding new content -->
     <p>Madagascar produces about 80% of the world’s vanilla, mainly in the northern region of Sava, notorious for the cultivation of the Bourbon vanilla variety.</p>
     <p>Since 2015, the wholesale price of the spice has risen nearly 500 percent, partly because of growing global demand for healthy, natural ingredients. But the main reason behind the skyrocketing prices is supply. Cyclones, drought, and crop-theft have hit Madagascar in recent years, slashing into the tender crop’s quality and quantity.</p>
@@ -129,31 +135,37 @@
         <noscript><img src="https://public.flourish.studio/visualisation/19506694/thumbnail" width="100%" alt="chart visualization" /></noscript>
     </div>
 
-    <!-- Embedding the PNG TimelineTrial1 with image map -->
+    <!-- Embedding the PNG TimelineTrial1 -->
     <div class="image-container">
-        <img src="assets/TimelineTrial1.png" alt="Timeline Trial PNG" class="timeline-png" usemap="#timeline-map">
-        <map name="timeline-map">
-            <area shape="rect" coords="150,100,200,150" href="#" alt="Point 1" onmouseover="showPopup(event, 'This is point 1 info');">
-            <area shape="rect" coords="300,200,350,250" href="#" alt="Point 2" onmouseover="showPopup(event, 'This is point 2 info');">
-            <!-- Add more areas as needed -->
-        </map>
+        <img src="assets/TimelineTrial1.png" alt="Timeline Trial PNG" class="timeline-png">
         <!-- Hover popup box -->
-        <div class="popup" id="popup"></div>
+        <div class="popup" id="popup">This is a hover popup text</div>
     </div>
 
     <!-- Existing scripts and content -->
     <script>
-        function showPopup(event, text) {
-            const popup = document.getElementById('popup');
-            popup.innerHTML = text; // Set the popup text
-            popup.style.left = (event.pageX + 10) + 'px'; // Position popup slightly off the cursor
-            popup.style.top = (event.pageY + 10) + 'px';
-            popup.style.display = 'block'; // Show popup
-        }
+        // Get PNG and popup elements
+        const timelineImg = document.querySelector('.timeline-png');
+        const popup = document.getElementById('popup');
+
+        // Add hover interaction for a specific point on the image
+        timelineImg.addEventListener('mousemove', function(e) {
+            const x = e.offsetX; // Get mouse x position relative to the image
+            const y = e.offsetY; // Get mouse y position relative to the image
+
+            // Condition to show popup on a specific area (example coordinates)
+            if (x > 150 && x < 200 && y > 100 && y < 150) {
+                popup.style.left = (x + 10) + 'px'; // Position popup slightly off the cursor
+                popup.style.top = (y + 10) + 'px';
+                popup.style.display = 'block'; // Show popup
+            } else {
+                popup.style.display = 'none'; // Hide popup if cursor is outside the area
+            }
+        });
 
         // Hide popup when leaving the image area
-        document.querySelector('.timeline-png').addEventListener('mouseleave', function() {
-            document.getElementById('popup').style.display = 'none';
+        timelineImg.addEventListener('mouseleave', function() {
+            popup.style.display = 'none';
         });
     </script>
 </body>
