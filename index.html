@@ -75,7 +75,27 @@
             font-size: 2em; /* Font size */
             font-weight: bold; /* Bold text */
             text-transform: uppercase; /* All caps */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow for better visibility */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Add a shadow for better visibility */
+        }
+        /* Popup box styling */
+        .popup {
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            display: none; /* Initially hidden */
+            position: absolute;
+            z-index: 10; /* Ensure it appears above other elements */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .flourish-chart, .flourish-map {
+                width: 100%; /* Ensure graphs adjust on smaller screens */
+            }
+            .image-container img {
+                max-width: 100%; /* Adjust images for smaller screens */
+            }
         }
     </style>
 </head>
@@ -84,7 +104,7 @@
     
     <!-- GIF container with padding -->
     <div class="gif-container">
-        <img src="https://www.reuters.com/graphics/MCCORMICK-VANILLA/010092KE3B8/images/gif-vanilla.gif" alt="Vanilla Plant GIF">
+        <img src="https://www.reuters.com/graphics/MCCORMICK-VANILLA/010092KE3B8/images/gif-vanilla.gif" alt="A GIF showing a growing vanilla plant">
     </div>
 
     <p class="centered">Growing global demand for natural ingredients and supply insufficiency have caused Madagascar vanilla prices to skyrocket by nearly 500% in the past four and a half years, making it more expensive than silver.</p>
@@ -118,5 +138,38 @@
         <img src="https://public.flourish.studio/visualisation/19499914/thumbnail" width="100%" alt="chart visualization" />
     </noscript>
 
+    <!-- Embedding the PNG TimelineTrial1 -->
+    <div class="image-container">
+        <img src="assets/TimelineTrial1.png" alt="Timeline Trial PNG" class="timeline-png">
+        <!-- Hover popup box -->
+        <div class="popup" id="popup">This is a hover popup text</div>
+    </div>
+
+    <!-- Existing scripts and content -->
+    <script>
+        // Get PNG and popup elements
+        const timelineImg = document.querySelector('.timeline-png');
+        const popup = document.getElementById('popup');
+
+        // Add hover interaction for a specific point on the image
+        timelineImg.addEventListener('mousemove', function(e) {
+            const x = e.offsetX; // Get mouse x position relative to the image
+            const y = e.offsetY; // Get mouse y position relative to the image
+
+            // Condition to show popup on a specific area (example coordinates)
+            if (x > 150 && x < 200 && y > 100 && y < 150) {
+                popup.style.left = (x + 10) + 'px'; // Position popup slightly off the cursor
+                popup.style.top = (y + 10) + 'px';
+                popup.style.display = 'block'; // Show popup
+            } else {
+                popup.style.display = 'none'; // Hide popup if cursor is outside the area
+            }
+        });
+
+        // Hide popup when leaving the image area
+        timelineImg.addEventListener('mouseleave', function() {
+            popup.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
