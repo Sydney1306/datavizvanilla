@@ -51,7 +51,7 @@
         }
         .gif-container img {
             width: 60%; /* Adjust the width of the GIF */
-            max-width: 600px; /* Set a max width */
+            max-width: 500px; /* Set a max width */
         }
         .image-container {
             position: relative; /* Position relative for overlay */
@@ -60,18 +60,18 @@
         }
         .image-container img {
             width: 100%; /* Responsive image */
-            max-width: 700px; /* Set a max width of 700px */
+            max-width: 800px; /* Set a max width of 700px */
         }
         .overlay {
             position: absolute; /* Position text over the image */
             top: 50%; /* Center vertically */
             left: 50%; /* Center horizontally */
             transform: translate(-50%, -50%); /* Adjust position */
-            color: white; /* Text color */
+            color: black; /* Text color */
             font-size: 2em; /* Font size */
-            font-weight: bold; /* Bold text */
+            font-weight: normal; /* Bold text */
             text-transform: uppercase; /* All caps */
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Add a shadow for better visibility */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Add a shadow for better visibility */
         }
         /* Popup box styling */
         .popup {
@@ -85,7 +85,7 @@
         }
 
         /* Responsive adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 700px) {
             .flourish-chart {
                 width: 100%; /* Ensure graphs adjust on smaller screens */
             }
@@ -139,7 +139,7 @@
 
     <!-- Embedding the PNG TimelineTrial1 -->
     <div class="image-container">
-        <img src="assets/TimelineTrial1.png" alt="Timeline Trial PNG" class="timeline-png">
+        <img src="assets/TimelineTrial3.png" alt="Timeline Trial PNG" class="timeline-png">
         <!-- Hover popup box -->
         <div class="popup" id="popup">Vanilla Vines</div>
     </div>
